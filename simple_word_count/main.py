@@ -21,7 +21,7 @@ class JobRunner:
 
         # do something with output
         for line in output:
-            print line
+            print(line)
 
 runner = JobRunner()
 runner.run(Mapper, Reducer, open('input.txt'))
