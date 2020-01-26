@@ -1,10 +1,9 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
-# book url: https://www.amazon.com/dp/B01KH9YWSY
-import sys
-import json
+from sys import stdin
+from json import loads
 
-for line in sys.stdin:
-  line = line.strip()
-  j = json.loads(line)
-  print "%s\t%s" % (j['user_id'], line)
+for line in stdin:
+    line = line.strip()
+    j = loads(line)
+    print(f"{j['user_id']}\t{line}")
